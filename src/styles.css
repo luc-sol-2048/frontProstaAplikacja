@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+
+
+.time{
+  font-size: 0.8em;
+}
+.form{
+  width: 100%;
+}
+.wyslijButton{
+  margin-left: 1.5em;
+}
+

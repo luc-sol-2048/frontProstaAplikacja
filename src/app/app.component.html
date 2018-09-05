@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <span>Witaj na mojej stronie</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="time">
+      <span>Czas na serwerze to {{time}}</span>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="time">
+      <button  class="wyslijButton" (click)="changeTopic('java')">Java</button>
+      <button  class="wyslijButton" (click)="changeTopic('vavr.io')">Vavr.io</button>
+      <button  class="wyslijButton" (click)="changeTopic('ogolny')">Ogólny</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+
+<mat-card *ngFor="let msg of messages">
+  <mat-card-title>
+    <span>Treść: {{msg.content}}</span>
+  </mat-card-title>
+  <mat-card-content>
+    <span>Autor: {{msg.author}}</span>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-form-field >
+    <input matInput placeholder="Autor" [(ngModel)] = "newMessage.author">
+  </mat-form-field>
+  <mat-form-field class="form">
+    <textarea placeholder="Wiadomość" matInput  [(ngModel)] = "newMessage.content"></textarea>
+  </mat-form-field>
+  <mat-card-footer>
+    <button  class="wyslijButton" (click)="send()">Wyśij</button>
+  </mat-card-footer>
+</mat-card>
+
+
