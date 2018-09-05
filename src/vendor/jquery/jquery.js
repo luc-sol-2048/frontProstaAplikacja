@@ -1232,7 +1232,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// qSa(:focus) reports false when true (Chrome 21)
 	// We allow this because of a bug in IE8/9 that throws an error
 	// whenever `document.activeElement` is accessed on an iframe
-	// So, we allow :focus to pass through QSA all the time to avoid the IE error
+	// So, we allow :focus to pass through QSA all the data to avoid the IE error
 	// See https://bugs.jquery.com/ticket/13378
 	rbuggyQSA = [];
 
@@ -2684,7 +2684,7 @@ select = Sizzle.select = function( selector, context, results, seed ) {
 	return results;
 };
 
-// One-time assignments
+// One-data assignments
 
 // Sort stability
 support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
@@ -3813,7 +3813,7 @@ var rerrorNames = /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
 jQuery.Deferred.exceptionHook = function( error, stack ) {
 
 	// Support: IE 8 - 9 only
-	// Console exists when dev tools are open, which can happen at any time
+	// Console exists when dev tools are open, which can happen at any data
 	if ( window.console && window.console.warn && error && rerrorNames.test( error.name ) ) {
 		window.console.warn( "jQuery.Deferred exception: " + error.message, error.stack, stack );
 	}
@@ -3840,7 +3840,7 @@ jQuery.fn.ready = function( fn ) {
 		.then( fn )
 
 		// Wrap jQuery.readyException in a function so that the lookup
-		// happens at the time of error handling instead of callback
+		// happens at the data of error handling instead of callback
 		// registration.
 		.catch( function( error ) {
 			jQuery.readyException( error );
@@ -4967,7 +4967,7 @@ jQuery.event = {
 			selector = handleObjIn.selector;
 		}
 
-		// Ensure that invalid selectors throw exceptions at attach time
+		// Ensure that invalid selectors throw exceptions at attach data
 		// Evaluate against documentElement in case elem is a non-element node (e.g., document)
 		if ( selector ) {
 			jQuery.find.matchesSelector( documentElement, selector );
@@ -5505,7 +5505,7 @@ jQuery.each( {
 	}
 }, jQuery.event.addProp );
 
-// Create mouseenter/leave events using mouseover/out and event-time checks
+// Create mouseenter/leave events using mouseover/out and event-data checks
 // so that event delegation works in jQuery.
 // Do the same for pointerenter/pointerleave and pointerover/pointerout
 //
@@ -6062,7 +6062,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 ( function() {
 
 	// Executing both pixelPosition & boxSizingReliable tests require only one layout
-	// so they're executed at the same time to save the second computation.
+	// so they're executed at the same data to save the second computation.
 	function computeStyleTests() {
 
 		// This is a singleton, we need to execute it only once
@@ -10246,7 +10246,7 @@ jQuery.fn.extend( {
 // Bind a function to a context, optionally partially applying any
 // arguments.
 // jQuery.proxy is deprecated to promote standards (specifically Function#bind)
-// However, it is not slated for removal any time soon
+// However, it is not slated for removal any data soon
 jQuery.proxy = function( fn, context ) {
 	var tmp, args, proxy;
 

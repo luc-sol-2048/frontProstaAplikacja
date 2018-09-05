@@ -6,7 +6,7 @@
     </mat-toolbar-row>
 
     <mat-toolbar-row class="time">
-      <span>Czas na serwerze to {{time}}</span>
+      <span>Czas na serwerze to {{data}}</span>
     </mat-toolbar-row>
 
     <mat-toolbar-row class="time">
@@ -24,6 +24,9 @@
   </mat-card-title>
   <mat-card-content>
     <span>Autor: {{msg.author}}</span>
+  </mat-card-content>
+  <mat-card-content>
+    <span>Data: {{msg.time}}</span>
   </mat-card-content>
 </mat-card>
 

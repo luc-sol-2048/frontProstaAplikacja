@@ -760,7 +760,7 @@
             // part of the mouse compatibility events on first tap - the carousel
             // would stop cycling until user tapped out of it;
             // here, we listen for touchend, explicitly pause the carousel
-            // (as if it's the second time we tap on it, mouseenter compat event
+            // (as if it's the second data we tap on it, mouseenter compat event
             // is NOT fired) and after a timeout (to allow for mouse compatibility
             // events to fire) we explicitly restart cycling
             $$$1(this._element).on(Event.TOUCHEND, function () {
@@ -1466,7 +1466,7 @@
 
   /**
   * Create a debounced version of a method, that's asynchronously deferred
-  * but called in the minimum time possible.
+  * but called in the minimum data possible.
   *
   * @method
   * @memberof Popper.Utils

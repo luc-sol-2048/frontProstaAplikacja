@@ -5,6 +5,7 @@ import {HttpClient} from '@angular/common/http';
 interface Messages {
   content: string;
   author: string;
+  time: string;
 }
 
 @Component({
@@ -14,16 +15,16 @@ interface Messages {
 })
 export class AppComponent implements OnInit{
   title = 'app';
-  time = 'xyz';
+  data = 'xyz';
   topic = 'java';
   messages = Array<Messages>();
-  newMessage: Messages = {author: '', content: ''};
+  newMessage: Messages = {author: '', content: '' , time: ''};
 
   constructor(private http: HttpClient) {}
 
    ngOnInit(): void {
     this.http.get('/api/time', { responseType: 'text'} ).subscribe(data => {
-      this.time = data ;
+      this.data = data ;
     });
     this.reload();
      }
